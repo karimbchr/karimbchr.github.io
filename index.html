@@ -247,6 +247,60 @@
     <div class="container">
       <h3>Internships &amp; Projects</h3>
 
+
+      <!-- Kaggle RNA Folding project -->
+      <h4 class="section-block-title">
+        Kaggle – RNA Folding project – 2025
+      </h4>
+
+      <div class="project">
+        <div class="project-title">
+          Predicting RNA chemical reactivity profiles with deep learning
+        </div>
+        <div class="project-meta">
+          Kaggle competition “RNA Folding” · Team project (PyTorch)
+        </div>
+
+        <p>
+          As part of a team project, we participated in the Kaggle “RNA Folding” competition,
+          which aims to predict base-wise chemical reactivity profiles (DMS / 2A3) from RNA
+          sequences. A key difficulty of the challenge is that the training RNAs are relatively
+          short, while the test set contains much longer molecules, so models must generalise
+          to sequence lengths they have never seen.
+        </p>
+
+        <p>
+          We implemented and compared four architectures in PyTorch: a simple LSTM baseline, a
+          BiLSTM, an LSTM with dilated Conv1D layers, and a Transformer. The Transformer
+          achieved the best masked MAE on validation and test sets (0.28 / 0.30) at the cost of
+          ~2.5M parameters and longer training time, while the LSTM + dilated Conv1D model
+          offered a very competitive trade-off between accuracy (~0.29 / 0.32) and computation.
+        </p>
+
+        <p class="figure-title">
+          Model comparison: accuracy vs complexity
+        </p>
+        <img
+          src="img/kaggle_rna_models_table.png"
+          alt="Table summarising validation and test MAE, number of parameters and training time per epoch for four models: simple LSTM, BiLSTM, LSTM with dilated Conv1D layers, and Transformer."
+          style="width:100%;max-width:640px;margin:0.25rem 0 1rem;display:block;">
+
+        <p>
+          On an individual RNA, the Transformer closely reproduces the experimental DMS
+          reactivity peaks along the sequence, showing that the model captures both local
+          motifs and longer-range structural patterns.
+        </p>
+
+        <p class="figure-title">
+          Real vs predicted DMS reactivity (Transformer, representative RNA)
+        </p>
+        <img
+          src="img/kaggle_rna_transformer_dms.png"
+          alt="Plot of true versus predicted DMS reactivity along a representative RNA sequence for the Transformer model. Green shows experimental reactivity and red the model prediction."
+          style="width:100%;max-width:640px;margin:0.25rem 0 1rem;display:block;">
+      </div>
+
+
       <!-- RPBS internship block -->
       <h4 style="font-size:1.15rem;margin:1.5rem 0 0.5rem;font-weight:700;">
         Internship RPBS – 2025
