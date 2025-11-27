@@ -169,8 +169,7 @@
       <div class="links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
+        <a href="#internships-projects">Internships &amp; Projects</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -243,70 +242,48 @@
     </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience">
+    <!-- Internships & Projects -->
+  <section id="internships-projects">
     <div class="container">
-      <h3>Experience</h3>
+      <h3>Internships &amp; Projects</h3>
 
+      <!-- RPBS internship block -->
       <div class="project">
-        <div class="project-title">Bioinformatics Intern – RPBS, Paris</div>
-        <div class="project-meta">March 2025 – June 2025</div>
+        <div class="project-title">RFpeptides internship – Deep-learning pipeline for cyclic peptide design</div>
+        <div class="project-meta">RPBS, Université Paris Cité · March 2025 – June 2025</div>
+
+        <!-- Figures -->
+        <p style="margin-top:0.5rem;">
+          <strong>Pipeline overview</strong> [RFpeptides pipeline]
+        </p>
+        <img src="rfpeptides_pipeline.png" alt="RFpeptides pipeline" style="width:100%;max-width:480px;margin:0.25rem 0 1rem;display:block;">
+
         <p>
-          Implemented part of the <strong>RFpeptides deep-learning pipeline</strong> for cyclic peptide
-          design using RFdiffusion, ProteinMPNN and RoseTTAFold2. Ran large-scale GPU jobs
-          with SLURM / Apptainer and analysed RMSD vs pLDDT correlations.
+          During my M1 internship at RPBS I implemented part of the RFpeptides deep-learning pipeline for cyclic peptide design, from target definition to sequence optimisation and structural validation. I ran large batches of RFdiffusion, ProteinMPNN and RoseTTAFold2 jobs on a GPU cluster using SLURM and Apptainer, and automated the analysis of generated models.
+        </p>
+
+        <p style="margin-top:0.75rem;">
+          <strong>Structural superposition of cyclic peptides</strong> [Cyclic peptide superposition]
+        </p>
+        <img src="rfpeptides_superposition.png" alt="Superposition of native and RF2-predicted cyclic peptides" style="width:100%;max-width:640px;margin:0.25rem 0 1rem;display:block;">
+
+        <p style="margin-top:0.75rem;">
+          <strong>Confidence vs accuracy</strong> [pLDDT vs RMSD]
+        </p>
+        <img src="rfpeptides_plddt_rmsd.png" alt="Correlation between pLDDT and RMSD" style="width:100%;max-width:480px;margin:0.25rem 0 0.5rem;display:block;">
+
+        <p>
+          I evaluated the designs by superposing predicted and native cyclic peptides and by analysing the relationship between model confidence (pLDDT) and structural accuracy (RMSD) across all generated models.
         </p>
       </div>
 
-      <div class="project">
-        <div class="project-title">Bioinformatics Intern – INRAE, Sophia-Antipolis</div>
-        <div class="project-meta">June 2024 – August 2024</div>
-        <p>
-          Deployed and benchmarked tools for <strong>Iso-Seq PacBio long-read transcriptomics</strong>
-          on an HPC platform (BLAST, PfamScan, TAGET, ASAPA, TAMA). Tuned minimap2 and gmap
-          parameters and inspected alignments in IGV.
-        </p>
-      </div>
+      <!-- Tu ajouteras ici plus tard les autres stages / projets (INRAE, Kaggle, etc.) -->
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <div class="container">
-      <h3>Projects</h3>
 
-      <div class="project">
-        <div class="project-title">RNA Folding prediction – Kaggle “Stanford Ribonanza”</div>
-        <div class="project-meta">Python · PyTorch · BiLSTM / Transformer</div>
-        <p>
-          Built a pipeline to predict RNA chemical reactivity from sequence-only input using
-          BiLSTM and Transformer models. Implemented one-hot encoding, normalization, masking
-          and evaluation on competition metrics.
-        </p>
-        <a href="https://github.com/DOS-2024/Prjet-Kaggle_BOUCHAARA_DELIKAYA_DELASSUS_SAM_RNA_Folding" target="_blank">
-          View code on GitHub
-        </a>
-      </div>
+ 
 
-      <div class="project">
-        <div class="project-title">Climate-driven modelling of <em>Ixodes scapularis</em></div>
-        <div class="project-meta">Python · R · SciPy · ggplot2</div>
-        <p>
-          Combined tick-density and climate datasets to model future suitability across US counties.
-          Fitted Gaussian models with SciPy and produced maps for different climate scenarios using R / ggplot2.
-        </p>
-      </div>
-
-      <div class="project">
-        <div class="project-title">Synteny analysis in <em>Escherichia coli</em></div>
-        <div class="project-meta">Python · BLAST</div>
-        <p>
-          Wrote Python scripts around BLAST to compare gene order between genomes and
-          visualise conserved genomic blocks.
-        </p>
-      </div>
-    </div>
-  </section>
 
   <!-- Contact -->
   <section id="contact">
