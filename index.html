@@ -277,7 +277,66 @@
         </p>
       </div>
 
-      <!-- Tu ajouteras ici plus tard les autres stages / projets (INRAE, Kaggle, etc.) -->
+            <!-- INRAE internship block -->
+      <div class="project">
+        <div class="project-title">Long-read transcriptomics internship – Iso-Seq PacBio benchmarking</div>
+        <div class="project-meta">INRAE, Sophia-Antipolis · June 2024 – August 2024</div>
+
+        <p>
+          During this internship, I benchmarked long-read transcriptomics tools on Iso-Seq PacBio data
+          and optimised alignment strategies for accurate isoform reconstruction. My work focused on
+          installing, containerising and comparing several pipelines (TAGET, ASAPA, TAMA), and
+          tuning alignment parameters for <strong>minimap2</strong> and <strong>gmap</strong> on an HPC cluster
+          (SLURM, Singularity/Apptainer).
+        </p>
+
+        <!-- Figure 1 : Soft-clipping optimisation -->
+        <p style="margin-top:0.75rem;">
+          <strong>Reducing soft-clipping through alignment parameter tuning</strong> [Soft-clipping optimisation]
+        </p>
+        <img src="img/inrae_softclipping.png"
+             alt="Soft-clipping optimisation with minimap2 and gmap"
+             style="width:100%;max-width:640px;margin:0.25rem 0 1rem;display:block;">
+
+        <p>
+          I evaluated the impact of alignment options (end-bonus, trimming thresholds, splice modes)
+          to minimise soft-clipped regions and improve transcript completeness, using IGV to inspect
+          mapped reads and identify consistent parameter choices across datasets.
+        </p>
+
+        <!-- Figure 2 : Alignment differences on M. incognita -->
+        <p style="margin-top:0.75rem;">
+          <strong>Alignment differences on <em>M. incognita</em> reads</strong> [GMAP mapping differences]
+        </p>
+        <img src="img/inrae_mincognita_mapping.png"
+             alt="GMAP mapping differences on M. incognita"
+             style="width:100%;max-width:640px;margin:0.25rem 0 1rem;display:block;">
+
+        <p>
+          By comparing GMAP alignments with reference genome annotations (.gff3), I highlighted
+          mismatches between transcript structures and genomic models, useful for downstream
+          isoform interpretation and annotation improvement.
+        </p>
+
+        <!-- Optional figure : pipelines (ASAPA, TAGET, TAMA) -->
+        <p style="margin-top:0.75rem;">
+          <strong>Benchmark of Iso-Seq analysis pipelines</strong> [ASAPA / TAGET / TAMA pipelines]
+        </p>
+        <img src="img/inrae_pipelines.png"
+             alt="Pipelines for Iso-Seq analysis (ASAPA, TAGET, TAMA)"
+             style="width:100%;max-width:640px;margin:0.25rem 0 1rem;display:block;">
+
+        <!-- Conclusion (vendeur) -->
+        <p>
+          Overall, I contributed by providing a clear benchmarking framework for long-read analysis
+          tools, identifying compatible pipelines and optimising alignment parameters for Iso-Seq
+          datasets. This work improved the reliability of isoform reconstruction and provided the lab
+          with validated HPC-ready workflows for future analyses.
+        </p>
+      </div>
+
+
+      
     </div>
   </section>
 
