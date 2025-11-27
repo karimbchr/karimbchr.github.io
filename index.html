@@ -339,7 +339,7 @@
 
             <!-- Climate modelling project -->
       <h4 class="section-block-title">
-        Climate modelling project – 2023
+        Climate modelling project – 2024
       </h4>
 
       <div class="project">
@@ -413,6 +413,52 @@
           unsuitable throughout.
         </p>
       </div>
+
+            <!-- MyBlastp synteny tool -->
+      <h4 class="section-block-title">
+        MyBlastp synteny tool – 2023
+      </h4>
+
+      <div class="project">
+        <div class="project-title">
+          MyBlastp – interactive synteny visualisation between <em>E. coli</em> strains
+        </div>
+        <div class="project-meta">
+          Université Côte d’Azur · Programming &amp; Bioinformatics project
+        </div>
+
+        <p>
+          In this project, we developed a Python pipeline and graphical interface to analyse
+          protein synteny between different <em>Escherichia coli</em> strains. The tool takes as input
+          the data directory, the protein ID of interest, the Assembly accessions of the query and
+          subject genomes, and the user’s operating system (macOS, Linux or Windows).
+        </p>
+
+        <p>
+          Behind the interface, the program parses genome annotation tables, extracts the query
+          protein and its upstream and downstream neighbours, runs BLASTp against the other
+          genomes, and parses the XML output to retrieve the best hits and their genomic
+          positions. These coordinates are then passed to a pygenomeviz-based plotting module
+          to display whether gene order is conserved (&ldquo;synteny&rdquo;) or disrupted (&ldquo;no synteny&rdquo;)
+          around the protein of interest.
+        </p>
+
+        <p class="figure-title">
+          MyBlastp interface and synteny visualisation
+        </p>
+        <img
+          src="img/myblastp_synteny_gui.png"
+          alt="Screenshot of the MyBlastp graphical interface with user inputs on the left and a synteny plot showing conserved gene blocks between two Escherichia coli genomes on the right."
+          style="width:100%;max-width:640px;margin:0.25rem 0 1rem;display:block;">
+
+        <p>
+          The interface is implemented with Tkinter so that biologists can launch complex
+          BLASTp-based synteny analyses without writing any code: one click on <em>Get my
+          synteny!</em> runs the full workflow and displays the resulting figure directly in the
+          application window.
+        </p>
+      </div>
+
 
 
             
