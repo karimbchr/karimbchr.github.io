@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Karim Bouchaara – Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f7f7fb;
+    }
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 1.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a.logo {
+      font-weight: 700;
+      text-decoration: none;
+      color: #111;
+    }
+    nav .links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #555;
+      font-size: 0.95rem;
+    }
+    nav .links a:hover {
+      color: #000;
+    }
+    .hero {
+      padding: 3rem 1rem 2rem;
+    }
+    .hero-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+    @media (max-width: 720px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+    .hero h1 {
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      margin-bottom: 0.75rem;
+      color: #444;
+    }
+    .hero-buttons {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid #222;
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: #222;
+      background: #fff;
+    }
+    .btn.primary {
+      background: #222;
+      color: #fff;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    .hero-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #ddd;
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    section {
+      padding: 2rem 1rem;
+    }
+    section h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 1.5rem;
+    }
+    @media (max-width: 720px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "• ";
+      color: #777;
+    }
+    .project {
+      background: #fff;
+      border-radius: 0.6rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #e0e0e0;
+    }
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .project-meta {
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 0.35rem;
+    }
+    .project a {
+      font-size: 0.85rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="#top" class="logo">Karim Bouchaara</a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Karim Bouchaara</h1>
+        <h2>M2 Bioinformatics &amp; Data Science student</h2>
+        <p>
+          Looking for a <strong>6-month internship</strong> (from mid Jan 2026) in
+          Data Science / Machine Learning or Bioinformatics.
+        </p>
+        <p>
+          I work at the intersection of <strong>machine learning, structural biology
+          and omics data</strong>: deep-learning pipelines for cyclic peptide design,
+          RNA folding (Kaggle), long-read transcriptomics and climate-driven modelling.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="CV_Karim_Bouchaara_Data.pdf" target="_blank">CV – Data Science</a>
+          <a class="btn" href="CV_Karim_Bouchaara_Bioinfo.pdf" target="_blank">CV – Bioinformatics</a>
+          <a class="btn" href="https://github.com/karimbchr" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <!-- Tu peux plus tard mettre une vraie image <img src="photo.jpg" alt="Karim"> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h3>About</h3>
+      <p>
+        I am a Master’s student in Bioinformatics at Université Paris Cité.
+        After two academic research internships, I now want to join a
+        <strong>tech or biotech start-up</strong> to work on real-world data and ML pipelines.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h3>Skills</h3>
+      <div class="grid-2">
+        <div>
+          <h4>Machine Learning &amp; Data</h4>
+          <ul>
+            <li>Python, R, SQL</li>
+            <li>scikit-learn, PyTorch</li>
+            <li>BiLSTM, Conv1D, Transformer models</li>
+            <li>Preprocessing, feature engineering, model evaluation</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Bioinformatics &amp; HPC</h4>
+          <ul>
+            <li>RFdiffusion, ProteinMPNN, RoseTTAFold2</li>
+            <li>Iso-Seq PacBio, BLAST, minimap2, gmap</li>
+            <li>Linux, SLURM, Singularity / Apptainer, GPU clusters</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <h3>Experience</h3>
+
+      <div class="project">
+        <div class="project-title">Bioinformatics Intern – RPBS, Paris</div>
+        <div class="project-meta">March 2025 – June 2025</div>
+        <p>
+          Implemented part of the <strong>RFpeptides deep-learning pipeline</strong> for cyclic peptide
+          design using RFdiffusion, ProteinMPNN and RoseTTAFold2. Ran large-scale GPU jobs
+          with SLURM / Apptainer and analysed RMSD vs pLDDT correlations.
+        </p>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Bioinformatics Intern – INRAE, Sophia-Antipolis</div>
+        <div class="project-meta">June 2024 – August 2024</div>
+        <p>
+          Deployed and benchmarked tools for <strong>Iso-Seq PacBio long-read transcriptomics</strong>
+          on an HPC platform (BLAST, PfamScan, TAGET, ASAPA, TAMA). Tuned minimap2 and gmap
+          parameters and inspected alignments in IGV.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h3>Projects</h3>
+
+      <div class="project">
+        <div class="project-title">RNA Folding prediction – Kaggle “Stanford Ribonanza”</div>
+        <div class="project-meta">Python · PyTorch · BiLSTM / Transformer</div>
+        <p>
+          Built a pipeline to predict RNA chemical reactivity from sequence-only input using
+          BiLSTM and Transformer models. Implemented one-hot encoding, normalization, masking
+          and evaluation on competition metrics.
+        </p>
+        <a href="https://github.com/DOS-2024/Prjet-Kaggle_BOUCHAARA_DELIKAYA_DELASSUS_SAM_RNA_Folding" target="_blank">
+          View code on GitHub
+        </a>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Climate-driven modelling of <em>Ixodes scapularis</em></div>
+        <div class="project-meta">Python · R · SciPy · ggplot2</div>
+        <p>
+          Combined tick-density and climate datasets to model future suitability across US counties.
+          Fitted Gaussian models with SciPy and produced maps for different climate scenarios using R / ggplot2.
+        </p>
+      </div>
+
+      <div class="project">
+        <div class="project-title">Synteny analysis in <em>Escherichia coli</em></div>
+        <div class="project-meta">Python · BLAST</div>
+        <p>
+          Wrote Python scripts around BLAST to compare gene order between genomes and
+          visualise conserved genomic blocks.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h3>Contact</h3>
+      <p>
+        Email: <a href="mailto:karimbchr4@gmail.com">karimbchr4@gmail.com</a><br>
+        GitHub: <a href="https://github.com/karimbchr" target="_blank">github.com/karimbchr</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Karim Bouchaara
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
